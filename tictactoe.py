@@ -109,4 +109,46 @@ def minimax(board):
     """
     Returns the optimal action for the current player on the board.
     """
-    raise NotImplementedError
+
+    # Minimax is a wrapper function here
+    def intern(board, depth=20, alpha=-math.inf, beta=math.inf, root=False):
+        if terminal(board):
+            score = utility(board)
+            if score > 0:
+                return score + depth
+            elif score < 0:
+                return score - depth
+            else:
+                return score
+
+        if player(board) == "X":
+            best_score = -math.inf
+            for action in actions(board):
+                score = intern(result(board, action), depth - 1, alpha, beta)
+                if score > best_score:
+                    best_score = score
+                    best_shot = action
+
+                # alpha-beta pruning
+                alpha = max(alpha, score)
+                if alpha >= beta:
+                    break
+
+            return best_shot if root else best_score
+
+        elif player(board) == "O":
+            best_score = math.inf
+            for action in actions(board):
+                score = intern(result(board, action), depth - 1, alpha, beta)
+                if score < best_score:
+                    best_score = score
+                    best_shot = action
+
+                # alpha-beta pruning
+                beta = min(beta, score)
+                if alpha >= beta:
+                    break
+
+            return best_shot if root else best_score
+
+    return intern(board, root=True)
