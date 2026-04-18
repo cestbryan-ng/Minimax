@@ -1,8 +1,7 @@
 # Minimax
 
 Ce dépôt est une partie de Tic Tac Toe entre un joueur(vous) et une IA. La logique de l'IA a été implémenté avec l'algorithme Miniax et Élagage alpha-bêta pour améliorer ses perfomances.
-
-Comprendre le [Minimax](https://fr.wikipedia.org/wiki/Algorithme_minimax) et [l"élagage alpha-bêta](https://fr.wikipedia.org/wiki/%C3%89lagage_alpha-b%C3%AAta)
+Comprendre le [Minimax](https://fr.wikipedia.org/wiki/Algorithme_minimax) et [l"élagage alpha-bêta](https://fr.wikipedia.org/wiki/%C3%89lagage_alpha-b%C3%AAta).
 
 
 # SetUp
