@@ -9,6 +9,5 @@ Comprendre le [Minimax](https://fr.wikipedia.org/wiki/Algorithme_minimax) et [l"
 ```bash
 git clone https://github.com/cestbryan-ng/https://github.com/cestbryan-ng/Minimax.git
 cd Minimax
-
 pip install -r requirements.txt
 ```
